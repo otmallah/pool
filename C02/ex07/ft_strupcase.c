@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ie-laabb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/30 19:55:16 by ie-laabb          #+#    #+#             */
-/*   Updated: 2021/07/04 17:26:35 by ie-laabb         ###   ########.fr       */
+/*   Created: 2021/06/30 19:55:16    otmallah          #+#    #+#             */
+/*   Updated: 2021/07/04 17:26:35 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strupcase(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{

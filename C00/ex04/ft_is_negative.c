@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchxr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ie-lxxbb <mxrvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: otmallah <mxrvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Crexted: 2021/06/24 08:11:06 by ie-lxxbb          #+#    #+#             */
-/*   Updxted: 2021/06/24 10:03:12 by ie-lxxbb         ###   ########.fr       */
+/*   Crexted: 2021/06/24 08:11:06 by otmallah          #+#    #+#             */
+/*   Updxted: 2021/06/24 10:03:12 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	ft_putchar(char c)
 void	ft_is_negative(int	n)
 {
 	if (n < 0)
-	{
 		write (1, "N", 1);
-	}
 	else
 		write (1, "P", 1);
 }
