@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/30 08:01:38 by otmallah          #+#    #+#             */
-/*   Updated: 2021/06/30 09:01:45 by otmallah         ###   ########.fr       */
+/*   Created: 2021/06/29 13:53:19 by otmallah          #+#    #+#             */
+/*   Updated: 2021/06/29 13:53:31 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	int	c;
+	int	temp;
 
-	c = *a;
+	temp = *a;
 	*a = *b;
-	*b = c;
+	*b = temp;
 }

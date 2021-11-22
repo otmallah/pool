@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/15 12:07:06 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/15 13:36:18 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/14 07:38:07 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/14 07:39:03 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,34 @@
 
 int	*ft_range(int min, int max)
 {
-	int		a;
-	int		j;
-	int		*t;
+	int	i;
+	int	*array;
+
+	i = 0;
+	if (min < max)
+	{
+		array = (int *) malloc(sizeof(int) * (max - min));
+		while (min < max)
+		{
+			array[i] = min;
+			min++;
+			i++;
+		}
+		return (array);
+	}
+	return (NULL);
+}
+/*int	main(void)
+{
+	int *i; 
+	int  j;
 
 	j = 0;
-	a = max - min;
-	if (a <= 0)
-		return (NULL);
-	t = (int *)malloc(sizeof(int) * (a));
-	if (!t)
-		return (NULL);
-	while (j < a)
+	i = ft_range(10 , 50);
+	while (j < 40)
 	{
-		t[j] = min + j;
+		printf("%d" , *i);
+		i++;
 		j++;
 	}
-	return (t);
-}
-/*
-#include <stdio.h>
-int main()
-{
-	int *t = ft_range(0, 10);
-	int i = 0;
-	while (i < 10)
-	{
-		printf("|%d|", t[i]);
-		i++;
-	}
-	printf("\n");
 }*/

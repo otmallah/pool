@@ -5,26 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/30 08:50:13 by otmallah          #+#    #+#             */
-/*   Updated: 2021/06/30 09:09:00 by otmallah         ###   ########.fr       */
+/*   Created: 2021/06/29 07:46:13 by otmallah          #+#    #+#             */
+/*   Updated: 2021/06/29 10:05:29 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_sort_int_tab(int *tab, int size)
+
 {
 	int	i;
-	int	j;
-	int	H;
+	int	temp;
 
 	i = 0;
-	j = size - 1;
-	while (i < j)
+	while (i < (size - 1))
 	{
-		if (tab[i + 1] < tab[i])
+		if (tab[i] > tab[i + 1])
 		{
-			H = tab[i + 1];
-			tab [i + 1] = tab[i];
-			tab[i] = H;
+			temp = tab[i];
+			tab[i] = tab[i + 1];
+			tab[i + 1] = temp;
 			i = -1;
 		}
 		i++;

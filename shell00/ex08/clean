@@ -1,1 +1,1 @@
-find . -type f \( -name '*~' -o -name '#*#' \) -print -delete
+find . -name "*~" -type f -print -delete -or -name "#*#" -type f -print -delete 

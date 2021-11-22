@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/01 12:18:32 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/03 14:04:33 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/01 14:18:08 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/04 08:00:46 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strcpy(char *dest, char *src)
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;

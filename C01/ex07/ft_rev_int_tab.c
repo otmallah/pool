@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/30 08:19:54 by otmallah          #+#    #+#             */
-/*   Updated: 2021/06/30 09:08:30 by otmallah         ###   ########.fr       */
+/*   Created: 2021/06/27 15:49:26 by otmallah          #+#    #+#             */
+/*   Updated: 2021/06/29 13:57:35 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_rev_int_tab(int *tab, int size)
 	int	temp;
 	int	j;
 
-	j = size - 1;
 	i = 0;
+	j = size - 1;
 	while (i < j)
 	{
 		temp = tab[i];

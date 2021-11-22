@@ -5,23 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/07 15:50:26 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/07 16:14:29 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/05 10:43:25 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/05 11:01:08 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
 	int	i;
-	int	res;
 	int	s;
+	int	r;
 
 	i = 0;
-	res = 0;
+	r = 0;
 	s = 1;
-	while ((str[i] == '\t') || (str[i] == '\r')
-		|| (str[i] == ' ') || (str[i] == '\v')
-		|| (str[i] == '\f') || (str[i] == '\n'))
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
 		i++;
 	while ((str[i] == '-') || (str[i] == '+'))
 	{
@@ -31,9 +29,9 @@ int	ft_atoi(char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = ((str[i] - '0') + (res * 10));
-		if ((str[i + 1] < '0') || (str[i + 1] > '9'))
-			return (res * s);
+		r = (str[i] - 48) + (r * 10);
+		if (str[i + 1] < '0' || str[i + 1] > '9')
+			return (r * s);
 		i++;
 	}
 	return (0);

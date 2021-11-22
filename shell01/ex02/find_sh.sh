@@ -1,1 +1,1 @@
-find . -type f -name "*.sh" | rev |  cut -d '/' -f 1 | rev | cut -d '.' -f 1
+find . -type f -name "*.sh" | rev | cut -f 1 -d '/' | rev | cut -d '.' -f 1

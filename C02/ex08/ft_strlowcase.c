@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/04 16:40:50 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/04 16:40:52 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/03 11:38:22 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/03 16:29:30 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@ char	*ft_strlowcase(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
 			str[i] = str[i] + 32;
-		}
 		i++;
 	}
 	return (str);

@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/30 11:23:31 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/04 08:06:05 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/01 14:21:47 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/04 14:27:23 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int	c;
+	unsigned int	i;
 
-	c = 0;
-	while (src[c] != '\0' && c < n)
+	i = 0;
+	while (i < n && src[i])
 	{
-		dest[c] = src[c];
-		c++;
+		dest[i] = src[i];
+		i++;
 	}
-	while (c < n)
+	while (i < n)
 	{
-		dest[c] = '\0';
-		c++;
+		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
 }

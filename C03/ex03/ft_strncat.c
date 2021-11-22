@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 09:05:15 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/06 17:03:47 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/06 11:42:51 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/06 12:07:29 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,16 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while ((src[j] != '\0') && (j < nb))
+	while (dest[i])
 	{
-		dest[i + j] = src[j];
-		j++;
+		i++;
 	}
-	dest[i + j] = '\0';
+	while (src[j] && j < nb)
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 09:05:04 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/06 19:16:22 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/06 08:36:44 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/06 12:07:17 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,15 @@ char	*ft_strcat(char *dest, char *src)
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (dest[i])
+	{
 		i++;
-	while (src[j] != '\0')
+	}
+	while (src[j])
 	{
 		dest[i + j] = src[j];
 		j++;
 	}
 	dest[i + j] = '\0';
 	return (dest);
-}
-int main()
-{
-	char	d[] = "abcd";
-	char	s[] = "efgh";
-	printf("%s", ft_strcat(d, s));
 }

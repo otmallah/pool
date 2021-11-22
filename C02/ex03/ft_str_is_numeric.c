@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/04 16:36:22 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/04 17:22:07 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/03 09:11:48 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/03 17:09:18 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_str_is_numeric(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
 			return (0);

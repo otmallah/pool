@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchxr.c                                       :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otmallah <mxrvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Crexted: 2021/06/24 08:11:06 by otmallah          #+#    #+#             */
-/*   Updxted: 2021/06/24 10:03:12 by otmallah         ###   ########.fr       */
+/*   Created: 2021/06/23 17:55:27 by otmallah          #+#    #+#             */
+/*   Updated: 2021/06/27 14:02:53 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ void	ft_putchar(char c)
 
 void	space(void)
 {
-	ft_putchar(',');
-	ft_putchar(' ');
+	write (1, ",", 1);
+	write (1, " ", 1);
 }
 
 void	ft_print_comb(void)
 {
-	int	a;
-	int	b;
-	int	c;
+	char	a;
+	char	b;
+	char	c;
 
 	a = '0';
 	while (a <= '7')
@@ -38,10 +38,10 @@ void	ft_print_comb(void)
 			c = b + 1;
 			while (c <= '9')
 			{
-				ft_putchar(a);
-				ft_putchar(b);
-				ft_putchar(c);
-				if (a != '7')
+				write (1, &a, 1);
+				write (1, &b, 1);
+				write (1, &c, 1);
+				if (a != '7' )
 					space();
 				c++;
 			}

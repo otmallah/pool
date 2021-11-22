@@ -1,40 +1,50 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/13 20:49:47 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/14 08:18:00 by otmallah         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int	a;
-	int	j;
+	int	i;
 
-	j = 0;
-	a = max - min;
-	if (a <= 0)
+	i = 0;
+	if (min >= max)
 	{
 		*range = NULL;
 		return (0);
 	}
-	*range = (int *)malloc(sizeof(int) * (a));
-	if (!*range)
+	*range = malloc(sizeof(int) * (max - min));
+	if (*range == 0)
 		return (-1);
 	while (min < max)
 	{
-		(*range)[j] = min;
-		j++;
+		(*range)[i] = min;
 		min++;
-	}
-	return (j);
-}
-/*
-int	main(void)
-{
-	int i = 0;
-	int size;
-	int *range;
-	size = ft_ultimate_range(&range, 0 , 20);
-	printf("%d\n", ft_ultimate_range(&range,0 ,20));
-	while (i < size)
-	{
-		printf("%d ", range[i]);
 		i++;
-	}	
-	return (0);
+	}
+	return (i);
+}
+
+/*int	main()
+{
+	int i , j;
+	int *p;
+
+	j = 0;
+	i = ft_ultimate_range(&p , 10 , 50);
+	printf("size is %d\n" , i);
+	while (j < 40)
+	{
+		printf("%d" , p[j]);
+		j++;
+	}
 }*/

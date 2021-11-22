@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/04 16:36:08 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/04 16:36:11 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/01 14:28:24 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/04 08:37:16 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,8 @@ int	ft_str_is_alpha(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!((str[i] >= 65 && str[i] <= 90)
-				|| (str[i] >= 97 && str[i] <= 122)))
-		{
+		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' || str[i] > 'z'))
 			return (0);
-		}
 		i++;
 	}
 	return (1);

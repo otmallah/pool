@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/04 16:36:49 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/04 17:23:28 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/03 14:02:06 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/03 16:24:45 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_str_is_uppercase(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if (!(str[i] >= 'A' && str[i] <= 'Z'))
 			return (0);

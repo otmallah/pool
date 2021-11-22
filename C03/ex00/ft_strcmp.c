@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 09:04:45 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/06 17:02:54 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/03 17:23:57 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/06 11:37:30 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while ((s1[i] != '\0') || (s2[i] != '\0'))
+	while (s1[i] && s2[i])
 	{
-		if (s1[i] < s2[i])
-			return (-1);
-		else if (s1[i] > s2[i])
-			return (1);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (0);
+	return (s1[i] - s2[i]);
 }

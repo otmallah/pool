@@ -1,30 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/04 18:00:37 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/05 10:45:49 by otmallah         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void	s(char	c)
+void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write (1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(int nbr)
 {
-	if (nb == -2147483648)
+	if (nbr == -2147483648)
 	{
-		s('-');
-		s('2');
-		nb = 147483648;
+		ft_putchar('-');
+		ft_putchar('2');
+		nbr = 147483648;
 	}
-	if ((nb < 0) && (nb != -2147483648))
+	if ((nbr < 0) && nbr != -2147483648)
 	{
-		nb = -nb;
-		s('-');
+		nbr = -nbr;
+		ft_putchar('-');
 	}
-	if (nb <= 9)
-	{
-		s(nb + '0');
-	}
+	if (nbr <= 9)
+		ft_putchar(nbr + '0');
 	else
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
 }

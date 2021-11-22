@@ -1,5 +1,5 @@
-Credentials cache: API:9311329A-7BBE-4AD8-8CEB-C05C7DB652B5
-        Principal: ie-laabb@1337.MA
+Credentials cache: API:4112
+        Principal: otmallah@1337.MA
 
   Issued                Expires               Principal
-Jun 22 11:07:08 2021  Jun 29 11:07:03 2021  krbtgt/1337.MA@1337.MA
+Jun 21 15:15:41 2021  Jun 28 15:15:08 2021  krbtgt/1337.MA@1337.MA

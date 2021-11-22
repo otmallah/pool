@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/15 12:06:32 by otmallah          #+#    #+#             */
-/*   Updated: 2021/07/15 13:36:25 by otmallah         ###   ########.fr       */
+/*   Created: 2021/07/14 07:35:19 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/14 07:37:03 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 char	*ft_strdup(char *src)
 {
-	char	*c;
 	int		i;
 	int		j;
+	char	*s2;
 
 	i = 0;
 	j = 0;
-	while (src[i] != '\0')
-		i++;
-	c = (char *)malloc(sizeof(char) * (i + 1));
-	if (!c)
-		return (NULL);
-	while (src[j] != '\0')
-	{
-		c[j] = src[j];
+	while (src[j])
 		j++;
+	s2 = (char *) malloc(sizeof(char) * (j + 1));
+	while (src[i])
+	{
+		s2[i] = src[i];
+		i++;
 	}
-	c[j] = '\0';
-	return (c);
+	s2[i] = '\0';
+	return (s2);
 }

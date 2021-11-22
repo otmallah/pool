@@ -1,87 +1,84 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otmallah <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/13 14:58:31 by otmallah          #+#    #+#             */
+/*   Updated: 2021/07/13 20:48:50 by otmallah         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
 #include <stdlib.h>
 
-char	scat(char	*dest, char	*src)
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strcat(char *s, char *b)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (s[i])
 		i++;
-	while (src[j] != '\0')
+	while (b[j])
 	{
-		dest[i + j] = src[j];
+		s[i + j] = b[j];
 		j++;
 	}
-	dest[i + j] = '\0';
-	return (*dest);
+	s[i + j] = '\0';
+	return (s);
 }
 
-int	destln(int	s, char	**str)
+int	ft_lenght(int a, char **b, char *c)
 {
-	int	a;
-	int	b;
-	int	c;
+	int	i;
+	int	lenght;
 
-	a = 0;
-	c = 0;
-	while (a < s)
+	i = 0;
+	while (i < a)
 	{
-		b = 0;
-		while (str[a][b] != '\0')
-		{
-			b++;
-			c++;
-		}
-		a++;
+		lenght = lenght + ft_strlen(b[i]);
+		i++;
 	}
-	return (c);
-}
-
-char	*salam(int size, char	*c)
-{
-	if (size == 0)
-	{
-		c = malloc(sizeof(char) * 1);
-		c = 0;
-		return (c);
-	}
-	return (c);
+	lenght = lenght + (a - 1) * ft_strlen(c);
+	return (lenght);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	char	*c;
 	int		i;
-	int		j;
-	int		k;
+	char	*s2;
 
 	i = 0;
-	c = NULL;
-	j = 0;
-	salam(size, c);
-	k = destln(size, strs);
-	while (sep[i])
-		i++;
-	c = (char *)malloc(sizeof(char) * (k + (i * (size - 1) + 1)));
-	c[0] = '\0';
-	if (c == 0)
-		return (NULL);
-	while (j < size)
+	if (size == 0)
 	{
-		scat(c, strs[j]);
-		if (j < size - 1)
-			scat(c, sep);
-		j++;
+		s2 = malloc(sizeof(char) * 1);
+		s2 = 0;
+		return (s2);
 	}
-	return (c);
+	ft_lenght(size, strs, sep);
+	s2 = (char *) malloc(sizeof(char) * (ft_lenght(size, strs, sep)));
+	s2[0] = '\0';
+	if (s2 == 0)
+		return (NULL);
+	while (i < size)
+	{
+		ft_strcat(s2, strs[i]);
+		if (i < size - 1)
+			ft_strcat(s2, sep);
+		i++;
+	}
+	return (s2);
 }
-/*
-#include<stdio.h>
-int	main()
-{
-	char *str[] = {"salam","l3antiz",""};
-	char sep[] = "+++";
-	printf("%s\n", ft_strjoin(3, str, sep));
-}*/
